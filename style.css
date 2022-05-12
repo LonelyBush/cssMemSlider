@@ -2,13 +2,12 @@ body {
     display: flex;
     align-items: center;
      flex-direction: column;
-    width: 100%;
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
     color: #58554B;
-    gap: 40px;
+    gap: 1em;
     background-image: url(assets/background/background.png);
-    
+    margin: 1rem;
 
 }
 
@@ -18,11 +17,77 @@ h1 {
 }
 
 .slider {
-    width: 25rem;
-    padding: 0.5em;
-    
-    border: 5px solid #559663;
-    background-color: #fff;
+    width: 100%;
+    max-width: 45rem;
+    margin: 1em;
+   border: 1rem solid #559663;
+    border-radius: 2rem;
+    background-color: #559663;
     overflow: hidden;
 
 }
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    
+    
+}
+
+.slide {
+  width: 25%;
+  
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  
+}
+
+span {
+    color: #fff;
+   background-color: #559663;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 15px;
+    
+
+}
+
+.navPoints {
+ display: flex;
+ justify-content: end;
+}
+
+.point {
+    height: 1rem;
+    width: 1rem;
+    margin: 0.5em;
+    cursor: pointer;
+    background-color: #a8d4b1;
+    opacity: .5;
+    border-radius: 50%;
+    transition: all 1.15s ease;
+}
+
+.point:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.point.active {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+input[name = 'point']{
+    position: absolute;
+    visibility: hidden;
+}
+
+
