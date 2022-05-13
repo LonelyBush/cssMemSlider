@@ -31,22 +31,27 @@ h1 {
     width: 400%;
     height: 100%;
     display: flex;
-    
-    
+    transition: all 0.5s ease-in-out;
+  
+}
+
+.overflow {
+    overflow: hidden;
 }
 
 .slide {
   width: 25%;
-  
   display: flex;
   gap: 0.5em;
   flex-direction: column;
+  
   
 }
 
 span {
     color: #fff;
    background-color: #559663;
+   transition: all 1.5s ease-in-out;
 }
 
 
@@ -80,14 +85,44 @@ img {
     transform: scale(1.1);
 }
 
-.point.active {
+.point:active {
     opacity: 0.8;
+    background-color: transparent;
+    border: 0.01rem solid #a8d4b1;
     transform: scale(1.1);
 }
 
 input[name = 'point']{
-    position: absolute;
-    visibility: hidden;
+    display: none;
 }
 
 
+#slide1:checked ~ .slides {
+    margin-left: 0;
+    
+}
+#slide2:checked ~ .slides {
+    margin-left: -100%;
+  
+}
+#slide3:checked ~ .slides {
+    margin-left: -200%;
+    
+}
+#slide4:checked ~ .slides {
+    margin-left: -300%;
+    
+}
+
+#slide1:checked ~ .navPoints label:nth-child(1),
+#slide2:checked ~ .navPoints label:nth-child(2),
+#slide3:checked ~ .navPoints label:nth-child(3),
+#slide4:checked ~ .navPoints label:nth-child(4) {
+    background-color: transparent;
+    border: 0.01rem solid #a8d4b1;
+    
+}
+
+.slider label::after{
+    border: 0.01rem solid #a8d4b1;
+}
