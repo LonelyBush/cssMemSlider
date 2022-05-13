@@ -35,9 +35,7 @@ h1 {
   
 }
 
-.overflow {
-    overflow: hidden;
-}
+
 
 .slide {
   width: 25%;
@@ -46,6 +44,22 @@ h1 {
   flex-direction: column;
   
   
+}
+
+.slides-text {
+    margin: 1rem;
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.slide-text{
+    color: #fff;
+    width: 25%;
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
 }
 
 span {
@@ -113,6 +127,24 @@ input[name = 'point']{
     margin-left: -300%;
     
 }
+
+#slide1:checked ~ .slides-text {
+    margin-left: 0;
+    
+}
+#slide2:checked ~ .slides-text {
+    margin-left: -100%;
+  
+}
+#slide3:checked ~ .slides-text {
+    margin-left: -200%;
+    
+}
+#slide4:checked ~ .slides-text {
+    margin-left: -300%;
+    
+}
+
 
 #slide1:checked ~ .navPoints label:nth-child(1),
 #slide2:checked ~ .navPoints label:nth-child(2),
