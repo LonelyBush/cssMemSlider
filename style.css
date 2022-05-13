@@ -24,6 +24,8 @@ h1 {
     border-radius: 2rem;
     background-color: #559663;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -32,6 +34,7 @@ h1 {
     height: 100%;
     display: flex;
     transition: all 0.5s ease-in-out;
+    order: 1;
   
 }
 
@@ -47,11 +50,12 @@ h1 {
 }
 
 .slides-text {
-    margin: 1rem;
+    margin: 0.15rem;
     width: 400%;
     height: 100%;
     display: flex;
     transition: all 0.5s ease;
+    order: 2;
 }
 
 .slide-text{
@@ -81,6 +85,7 @@ img {
 .navPoints {
  display: flex;
  justify-content: end;
+ order: 3;
 }
 
 .point {
@@ -157,4 +162,20 @@ input[name = 'point']{
 
 .slider label::after{
     border: 0.01rem solid #a8d4b1;
+}
+
+@media (max-width: 400px){
+    .navPoints{
+        margin: 0.15rem;
+        order: 2;
+        justify-content: center;
+    }
+    .slides {
+        order: 1;
+    }
+    .slides-text{
+        order: 3;
+        text-align: center;
+    }
+
 }
